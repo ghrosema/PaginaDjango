@@ -3,7 +3,7 @@ layout: default
 ---
 
 Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
-__Basado en el tutorial de __ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/)
+_Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/)
 
 # [](#header-1)Índice
 
@@ -24,7 +24,28 @@ __Basado en el tutorial de __ [Django Girls](https://argentinaenpython.com/djang
 - 7 Administrador de django
 
 # [](#header-1)Introducción
+### Imagen Django-logo
+![](https://github.com/ghrosema/PaginaDjango/blob/master/docs/assets/IMG/220px-Django_logo.svg.png)
 
+Django es un entorno de trabajo (framework en inglés), libre y escrito en el popular lenguaje de
+programación Python.
+
+Su funcionamiento nos permite empezar a comprender un concepto muy importante para el
+desarrllo de software: el patrón de diseño modelo-vista-controlador.
+
+Django se desarrolló para administrar sitios de noticias pero debido a su versatilidad se transformó
+en un framework de propósito general.
+
+[Django en wikipedia](https://es.wikipedia.org/wiki/Django_(framework))
+
+***
+
+# [](#header-1)Requerimientos y conocimientos previos
+
+*  Alguna instalación GNU/Linux, puede ser una máquina virtual.
+*  Conocimientos en instalación de sistemas operativos o virtualización.
+*  Manejo del sistema de archivos. Creación de archivos y carpetas. Manejo del árbol de directorios.
+*  Concepto de archivo de texto plano y modelo cliente-servidor.
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
