@@ -1,6 +1,5 @@
-title: Tu primer página con Django
-description: Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
-Basado en el tutorial de Django Girls :
+title: Tu primer sitio con Django
+description: Basado en el tutorial de Django Girls
 show_downloads: true
 google_analytics:
 theme: 
