@@ -1,21 +1,30 @@
 ---
 layout: default
 ---
+
+Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
+__Basado en el tutorial de __ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/)
+
 # [](#header-1)Índice
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+- 1  Introducción
+- 2  Requerimientos y conocimientos previos
+- 3 ¿Por qué un tutorial de un sitio simple en Django?
+- 4 GNU/Linux
+- 5 Tu Propia página con Django
+  - 5,1 Preparando el entorno
+  - 5,2 Creando un entorno virtual
+  - 5,3 Instalación de Django
+  - 5,4 Comenzamos a armar nuestro sitio
+  - 5,5 Configuraciones
+  - 5,6 Corriendo el servidor
+- 6 Objetos y modelos en Django
+  - 6,1 Modelo post
+  - 6,2 El modelo en la base de datos
+- 7 Administrador de django
+
+# [](#header-1)Introducción
+
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
