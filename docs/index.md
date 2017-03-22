@@ -3,7 +3,7 @@ layout: default
 ---
 
 Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
-_Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/)
+_Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/).
 
 # [](#header-1)Índice
 
@@ -24,7 +24,7 @@ _Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-
 - 7 Administrador de django
 
 # [](#header-1)Introducción
-### Imagen Django-logo
+
 ![](https://github.com/ghrosema/PaginaDjango/blob/master/docs/assets/IMG/220px-Django_logo.svg.png)
 
 Django es un entorno de trabajo (framework en inglés), libre y escrito en el popular lenguaje de
@@ -36,7 +36,7 @@ desarrllo de software: el patrón de diseño modelo-vista-controlador.
 Django se desarrolló para administrar sitios de noticias pero debido a su versatilidad se transformó
 en un framework de propósito general.
 
-[Django en wikipedia](https://es.wikipedia.org/wiki/Django_(framework))
+[Django en wikipedia](https://es.wikipedia.org/wiki/Django_(framework)).
 
 ***
 
@@ -46,6 +46,29 @@ en un framework de propósito general.
 *  Conocimientos en instalación de sistemas operativos o virtualización.
 *  Manejo del sistema de archivos. Creación de archivos y carpetas. Manejo del árbol de directorios.
 *  Concepto de archivo de texto plano y modelo cliente-servidor.
+
+***
+
+# [](#header-1)¿Por qué un tutorial para crear un sitio simple en Django?
+
+La intención de este tutorial es permirtir una aproximación al popular framework. A partir de este
+sitio básico se pueden generar sitios a medida. Además es una oportunidad más para conocer el
+lenguaje python. Django es ampliamente solicitado en el mercado laboral.
+
+# [](#header-1)GNU/Linux
+
+Para este tutorial emplearemos el sistema operativo GNU/Linux Debian. El sistema respeta las
+libertades del usuario y promueve la solidaridad social de las comunidades de usuarios. Puede
+utilizarse sin que esto implique el pago o la violación de licencias. Es nuestro deber como
+funcionarios públicos utilizar herramientas que estén al alcance de todos los ciudadanos.
+
+# [](#header-1)Tu propio Blog con Django:
+
+## [](#header-2)Preparando el entorno:
+
+El primer paraso para preparar nuestro entorno es instalar la versión correspondiente del lenguaje
+Python. Para eso utilizaremos el famoso gestor de paquete de las distribuciones basadas en
+GNU/Linux Debian: apt. Lo haremos a través de la terminal y con permisos de administrador:
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
