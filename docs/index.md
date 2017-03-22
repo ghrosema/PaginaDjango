@@ -72,12 +72,33 @@ GNU/Linux Debian: apt. Lo haremos a través de la terminal y con permisos de adm
 
 $ sudo apt-get install python3.5
 
->Nota: La terminal es un prompt o línea de comandos que puede hayarse en el
-menú de la mayoría de los escritorios.
+>La terminal es un prompt o línea de comandos que puede hayarse en el
+menú de la mayoría de los escritorios. Allí se ingresan los comandos y al presionar la tecla enter se ejecutan. Será una
+herramienta indispensable.
+>[Introducción a la línea de comandos por la FLOSS](http://write.flossmanuals.net/introduccion-a-la-linea-de-
+comandos/comandante/).
+>[Introducción a la línea de comandos de Django Girls](https://argentinaenpython.com/django-girls/gitbook/intro_to_command_line/).
 
-![](https://github.com/ghrosema/PaginaDjango/blob/master/docs/assets/IMG/matt-icons_utilities-terminal-300px.png)
+![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/matt-icons_utilities-terminal-300px.png)
 
+Comprobamos que la instalación sea efectiva ejecuntado.
 
+$ python3 --version
+python 3.5.1
+
+Siendo la primera línea nuestro comando y la segunda la salida.
+
+## [](#header-2)Preparando el entorno:
+
+Los entornos virtuales son herramientas muy importatentes a la hora de desarrollar aplicaciones
+web o a la hora de trabajar con distintas versiones de una o más librerías. Aprenderemos a crear uno
+para trabajar con python de forma que nuestro entorno de desarrollo se aisle del resto del sistema.
+
+>Nota: Si no llegas a comprender la necesidad de generar un
+entorno virtual deber perdirle a tu mentor que te amplie y
+ejemplifique las razones para hacerlo.
+
+![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/alien-city-scene-300px.png)
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
