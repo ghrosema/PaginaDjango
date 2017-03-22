@@ -3,7 +3,7 @@ layout: default
 ---
 
 Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
-_Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-girls/gitbook/).
+Basado en el tutorial de [Django Girls](https://argentinaenpython.com/django-girls/gitbook/).
 
 # [](#header-1)Índice
 
@@ -25,7 +25,7 @@ _Basado en el tutorial de _ [Django Girls](https://argentinaenpython.com/django-
 
 # [](#header-1)Introducción
 
-![](https://github.com/ghrosema/PaginaDjango/blob/master/docs/assets/IMG/220px-Django_logo.svg.png)
+![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/220px-Django_logo.svg.png)
 
 Django es un entorno de trabajo (framework en inglés), libre y escrito en el popular lenguaje de
 programación Python.
@@ -69,6 +69,14 @@ funcionarios públicos utilizar herramientas que estén al alcance de todos los 
 El primer paraso para preparar nuestro entorno es instalar la versión correspondiente del lenguaje
 Python. Para eso utilizaremos el famoso gestor de paquete de las distribuciones basadas en
 GNU/Linux Debian: apt. Lo haremos a través de la terminal y con permisos de administrador:
+
+$ sudo apt-get install python3.5
+
+>Nota: La terminal es un prompt o línea de comandos que puede hayarse en el
+menú de la mayoría de los escritorios.
+
+![](https://github.com/ghrosema/PaginaDjango/blob/master/docs/assets/IMG/matt-icons_utilities-terminal-300px.png)
+
 
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
