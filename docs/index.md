@@ -187,7 +187,84 @@ Bien. El esqueleto de nuestro sitio está creado. Veamos los resultados.
 
 ## [](header-2)Corriendo el servidor
 
-![]()
+![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/Client-server-model.svg.png)
+
+Nosotros estamos trabajando el lado del servidor de nuestra página. El cliente será un explorador
+web que conectará a nuestro servidor y hará la petición. Igual que cuando navegamos por internet
+pero todo funcionando local en nuestra computadora.
+
+>Para ampliar los conocimientos sobre el [modelo cliente-servidor](https://es.wikipedia.org/wiki/Cliente-servidor)
+
+Corremos el comando
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py runserver
+
+La salida nos indicará que nuestro server está a la escucha en la ip y puerto [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Allí nos dirijimos con nuestro navegador.
+
+Debariamos ver algo así:
+
+![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/scrot1.png)
+
+Ya tienes tu sitio Django funcionando. Vamos a agregar algunos contenidos.
+
+
+# [](#header-1)Objetos y modelos en Django
+
+
+En el paradigma de la Programación Orientada a Objetos (POO) debemos pensar cada entidad de
+nuestra pagina como un objeto con determinadas propiedades y determinadas funcionalidades.
+
+> [Programación Orientada a Objetos en Wikipedia](https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos)
+
+En nuestro caso, generaremos una o más publicaciones con sus atributos, como son el título, el
+autor, la fecha, la hora, etc. y con sus métodos. Por ejemplo “publicar”.
+
+Usaremos el modelo de blog. Para ello crearemos una aplicación separada dentro de nuestra carpeta
+principal.
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py startapp blog
+
+Y se creará la correspondiente carpeta. Debemos indicarle a Django que fue creada y puede
+utilizarla. Para ello volvemos a editar settings.py en misitio. Buscamos la línea INSTALLED_APPS y agreamos a ‘blog’. Quedaría así:
+
+INSTALLED_APPS = []
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+'blog',
+
+Bien. Al fin es hora de escribir código fuente en python. Te brindamos un modelo que, con un poco
+de paciencia, podrás modificar adaptándolo a tus necesidades.
+
+## [](#header-2)Modelo Post
+
+Vamos a modificar el archivo models.py que se encuentra dentro de la carpeta blog.
+
+>Como vamos escribir código fuente es conveniente utilizar algún ide que reconozca la sintaxis de python. Recomendamos editra. [Editra](http://editra.org/) es libre y encuentra en los repositorios de la mayoría de las distribuciones.
+
+Pasamos el código del archivo. Escribe a mano, clona o descarga el proyecto de github pero no copies y pegues. Y si lo hacés y nada funciona comprueba el identado de Python:
+
+```python
+from django.db import models
+# Create your models here.
+from django.utils import timezone
+class Post(models.Model):
+	author = models.ForeignKey('auth.User')
+	title = models.CharField(max_length=200)
+	text = models.TextField()
+	created_date = models.DateTimeField(default=timezone.now)
+	published_date = models.DateTimeField(blank=True, null=True)
+
+	def publish(self):
+		self.published_date = timezone.now()
+		self.save()
+	def __str__(self):
+		return self.title
+```
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](another-page).
