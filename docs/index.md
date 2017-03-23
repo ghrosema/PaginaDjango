@@ -100,6 +100,94 @@ ejemplifique las razones para hacerlo.
 
 ![](https://raw.githubusercontent.com/ghrosema/PaginaDjango/master/docs/assets/IMG/alien-city-scene-300px.png)
 
+
+Instalamos venv
+
+$ sudo apt-get install python3-venv
+
+Crearemos un directorio y nos movemos hacía él:
+
+$ mkdir PaginaDjango
+$ cd PaginaDjango
+
+>Recuenda que los sistemas GNU/Linux, así como todos los Unix-like, son sensibles a las
+mayúsculas (case sensitive en inglés).
+
+Ahora utilizaremos el módulo venv de python3 y elegiremos un nombre para nuestro entrono:
+
+$ python3 -m venv MiEntorno
+
+Se creará una nueva subcarpeta dentro de la carpeta DjangoBlog llamanda MiEntorno y contendrá
+algunas carpetas que permiten el funcionamiento de entorno aislado. Dentro de una de esas carpetas
+, ../PaginaDjangoBlog/MiEntorno/bin/ , tenemos el script de activación del entorno virtual. Lo
+corremos utilizandpo el comando source:
+
+$ source MiEntorno/bin/activate
+
+Ahora nuestro prompt o símbolo de sistema cambiará y nos indicará el nombre del entrono virtual
+entre parentésis (MiEntorno)
+Estamos listos para la inslación de Django.
+
+## [](#header-2)Instalación de Django
+
+Cuando activamos el entorno virtual ya estamos en condiciones de instalar versión que necesitemos
+de forma aislada del resto del sistema. La intalación se realizará en nuestro entorno virtual. Para ello
+utilizaremos el gestor de paquetes “pip”.
+
+(MiEntorno) ~$ pip install django==1.8
+
+## [](#header-2)Comenzamos a armar nuestro sitio
+
+Pana iniciar el proyecto correremos algunos scripts (Python es un lenguaje de scripts)
+proporcionanos por Django para generar un esqueleto de directorios y archivos necesarios.
+
+(MiEntorno) ~/DjangoPagina$ django-admin startproject misitio .
+
+>Importante: Tres aspectos a tener en cuenta con el anterior comando. El primero es el entorno
+virtual activado. Lo confirmamos observando el prompt de la terminal. El segundo punto es la
+carpeta sobre la cual ejecutamos el comando. Nótese que nos econtramos sobre la primera
+carpeta que creamos. Y el tercer punto importante es, justamente, el carácter de punto al final
+del comando. En los sistemas Unix-like ese es el comodín para indicar que la acción se realize
+sobre el directorio en el cual nos encontramos.
+
+Nuestro árbol de directorios debería ser el siguiente:
+
+(MiEntorno) ~/DjangoPagina$ ls
+manage.py MiEntorno/ misitio/
+
+## [](#header-2)Configuraciones
+
+Vamos a editar archivos de texto plano. Deberías elegir alguno de muchas opciones disponibles
+siendo gedit y leafpad los que funcionan en modo gráfico y es común que estén instalalados por
+defecto y nano o vim las opciones modo texto que también suelen estar instaladas por defecto.
+Nostros usaremos nano.
+
+(MiEntorno) ~/DjangoPagina$ nano misitio/settings.py
+
+Y dentro de ese archivo modificaremos el parameto TIME_ZONE =’UTC’ por
+TIME_ZONE=’America/Argentina/Buenos_Aires/’ . Estamos configurando el uso horario. De más
+está decir que si te encuentras en otro lugar o estás desarrollando para otro país deberias verficar
+[Base de datos de usos horarios en wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) para encotrar el uso que corresponda.
+Hay muchos otros parámetros para modificar. Investiga según tus necesidades.
+
+Vamos a agregar una ruta a los archivos estáticos, por ejemplo los archivos CSS. Agregaremos un
+línea al final del archivo con el siguiente parámetro.
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+Y guardamos.
+
+Nuestro sitio necesita una base de datos para gestionar contenidos, usuario, fechas, etc.
+Utilizaremos la opción por defecto: sqlite3. Para crear la base de datos ejecutamos
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py migrate
+
+La salida nos confirma con muchos OK, OK, OK.
+Bien. El esqueleto de nuestro sitio está creado. Veamos los resultados.
+
+## [](header-2)Corriendo el servidor
+
+![]()
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](another-page).
