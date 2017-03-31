@@ -5,7 +5,7 @@ Basado en el tutorial de [Django Girls](https://tutorial.djangogirls.org/es).
 
 # [](#header-1)Índice
 
-- 1  [Introducción]
+- 1  [Introducción](https://github.com/ghrosema/PaginaDjango/blob/master/docs/introduccion.md).
 - 2  Requerimientos y conocimientos previos
 - 3 ¿Por qué un tutorial de un sitio simple en Django?
 - 4 GNU/Linux
@@ -263,3 +263,48 @@ class Post(models.Model):
 		return self.title
 ```
 
+## [](#header-2)El modelo en la base de datos.
+
+Hay que comunicarle nuestro nuevo modelo a la base de datos. Eso lo haremos con el comando:
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py makemigrations blog
+
+Y luego
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py migrate blog
+
+Perfecto. Tenemos nuestro modelo y su correspondencia en la base de datos.
+
+# [](#header-1)Administrador de Django.
+
+Cuando dijimos que Django es un framework o entorno de trabajo nos referiamos a que cuenta con muchas herramientas para la creación de sitios así como muchas herramientas para la administración y mantenimiento del mismo. El administrador de Django es un muy buen ejemplo. Pongámoslo a funcionar.
+
+Vamos a modificar el archivo admin.py de la carpeta blog.
+
+Nota: Recuerda que si Python no está bien identado no funciona.
+
+Debería quedar así:
+
+```python
+from django.contrib import admin
+# Register your models here.
+from .models import Post
+admin.site.register(Post)
+```
+
+Ahora crearemos el usuario administrador (o root) desde la línea de comandos.
+
+(MiEntorno) ~/DjangoPagina$ python3 manage.py createsuperuser
+
+La salida será un prompt interactivo donde deberás ingresar un nombre de ususario, un correo y una clave de al menos 8 caracteres. Cuando ingreses la clave no se reflejará en la pantalla. Es el comportamiento esperado.
+
+Ahora podemos ir a nuestro explorador e ingresar a la url
+
+http://127.0.0.1:8000/admin/
+
+Nota:Recuerda que el servidor debe estar corriendo. Si no es así abre una terminal e inicialo.
+
+!Genial¡ Tu sitio ya puede ser administrado. Agrega un post y publícalo.
+Para conocer más acerca del administrador de Python puedes ingresar a
+
+https://docs.djangoproject.com/en/1.8/ref/contrib/admin/
