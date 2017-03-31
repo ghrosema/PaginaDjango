@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-
-Autor: Rodrigo Sebastián Márquez, Mentor de Programá tu Futuro, Sede CMD.
-Basado en el tutorial de [Django Girls](https://argentinaenpython.com/django-girls/gitbook/).
+Basado en el tutorial de [Django Girls](https://tutorial.djangogirls.org/es).
 
 # [](#header-1)Índice
 
-- 1  Introducción
+- 1  [Introducción]
 - 2  Requerimientos y conocimientos previos
 - 3 ¿Por qué un tutorial de un sitio simple en Django?
 - 4 GNU/Linux
